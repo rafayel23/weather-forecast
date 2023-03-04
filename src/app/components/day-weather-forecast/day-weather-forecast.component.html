@@ -1,0 +1,9 @@
+
+<div class="flex-box">
+  <div *ngFor="let detail of selectedDayDetails" class="day-details">
+    <div>{{detail.time | prependZero}}<sup>00</sup></div>
+    <img [src]="detail.icon">
+    <div>{{detail.temp | temp}}</div>
+  </div>
+</div>
+<app-forecast-graph [details]="selectedDayDetails"></app-forecast-graph>

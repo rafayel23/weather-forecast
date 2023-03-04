@@ -1,0 +1,14 @@
+<div class="nav-bar flex-box">
+
+  <div
+  class="nav-item-container" 
+  *ngFor="let dayForecast of weeklyForecast, index as i" 
+
+  [class.selected]="selectedNavItem === i"
+  [class.previous-of-selected]="selectedNavItem === i + 1"
+  [class.next-of-selected]="selectedNavItem === i - 1"
+  (click)="selectedNavItem = i"
+  >
+    <app-navigation-bar-item [forecast]="dayForecast"></app-navigation-bar-item>
+  </div>
+</div>

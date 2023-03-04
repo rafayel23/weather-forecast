@@ -1,0 +1,10 @@
+
+<div routerLink="{{forecast.day}}" class="nav-item">
+  <div class="weekday">{{forecast.weekday | weekday }}</div>
+  <div class="date">{{computedDate}}</div>
+  <img [src]="forecast.icon">
+  <div class="temperature">
+    <b>{{forecast.maxTemp | temp}}</b>
+    <sub>{{forecast.minTemp | temp}}</sub>
+  </div>
+</div>
